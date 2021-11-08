@@ -1,1 +1,103 @@
 /* Other rules */
+.container {
+  width: 1920px;
+  background-color: #f3f5f5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.header {
+  margin-left: 362px;
+  margin-right: 730px;
+  background-color: white;
+}
+
+.header img {
+  width: 155px;
+  height: 85px;
+  margin-bottom: 30px;
+}
+
+.title {
+  margin-left: 362px;
+  display: flex;
+  flex-direction: row;
+}
+
+.title img {
+  width: 350px;
+  height: 197px;
+  border-radius: 5px;
+}
+
+.text-tittle {
+  width: 820px;
+  height: 183px;
+  margin-right: 70px;
+  margin-bottom: 70px;
+}
+.text-tittle h1 {
+  margin-bottom: 49px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.text-tittle h2 {
+  font-size: 22px;
+  color: #868a8a;
+}
+
+.container-categories {
+  margin-left: 362px;
+  margin-right: 730px;
+}
+
+.container-categories h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.container-categories img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+}
+
+.container-meals {
+  display: flex;
+  margin-right: 20px;
+}
+
+.container-meal {
+  background-color: white;
+  display: flex;
+  width: 400px;
+  height: 160px;
+  margin-right: 20px;
+}
+
+.container-meal h3 {
+  font-size: 18px;
+  font-weight: medium;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.container-meal-text {
+  font-size: 14px;
+  line-height: 17px;
+  color: #808484;
+}
+
+#price {
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+.image-meal {
+  margin-left: 20px;
+  border-radius: 5px;
+}
