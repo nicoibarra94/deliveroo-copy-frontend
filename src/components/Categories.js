@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Categories = ({ data }) => {
   return (
     <div className="container">
@@ -12,12 +14,20 @@ const Categories = ({ data }) => {
                     <div className="container-meal-text">
                       <h3>{meal.title}</h3>
                       <p>{meal.description}</p>
-                      <p id="price">{meal.price}</p>
+                      <div className="price-popular">
+                        <p id="price">{meal.price} €</p>
+                        {meal.popular === true && (
+                          <div className="star">
+                            <FontAwesomeIcon icon="star" />
+                            <p>Populaire</p>
+                          </div>
+                        )}
+                      </div>
                     </div>
+
                     {meal.picture && (
                       <img className="image-meal" src={meal.picture} alt="" />
                     )}
-                    {meal.popular && <p>*</p>}
                   </div>
                 );
               })}
