@@ -11,16 +11,18 @@ const Meal = ({
 }) => {
   const handleAddtoCart = (elemmeals, meal) => {
     const updateList = [...cartList];
+
     for (let i = 0; i < elemmeals.length; i++) {
       if (elemmeals[i].id === meal) {
-        updateList.push({ quantity: 1, item: elemmeals[i] });
+        elemmeals[i].quantity = 1;
+        updateList.push(elemmeals[i]);
         setCartList(updateList);
         break;
       }
     }
     let newSousTotal = 0;
     for (let i = 0; i < updateList.length; i++) {
-      newSousTotal = newSousTotal + Number(updateList[i].item.price);
+      newSousTotal = newSousTotal + Number(updateList[i].price);
     }
     setsousTotal(newSousTotal);
     setTotal((newSousTotal + 2.5).toFixed(2));

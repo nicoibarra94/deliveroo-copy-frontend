@@ -51,7 +51,14 @@ function App() {
         total={total}
         setTotal={setTotal}
       />
-      <Cart cartList={cartList} sousTotal={sousTotal} total={total} />
+      <Cart
+        cartList={cartList}
+        sousTotal={sousTotal}
+        total={total}
+        setTotal={setTotal}
+        setCartList={setCartList}
+        setsousTotal={setsousTotal}
+      />
     </div>
   );
 }
