@@ -24,7 +24,7 @@ const Meal = ({
     for (let i = 0; i < updateList.length; i++) {
       newSousTotal = newSousTotal + Number(updateList[i].price);
     }
-    setsousTotal(newSousTotal);
+    setsousTotal(newSousTotal.toFixed(2));
     setTotal((newSousTotal + 2.5).toFixed(2));
   };
   return (

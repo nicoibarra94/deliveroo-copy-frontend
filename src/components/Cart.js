@@ -9,11 +9,14 @@ const Cart = ({
   setsousTotal,
 }) => {
   return (
-    <div className="cart">
-      <h1>Valider mon panier</h1>
+    <div className={cartList.length === 0 ? "cart" : "cart-green"}>
+      <button
+        className={cartList.length === 0 ? "cart-title" : "cart-green-title"}
+      >
+        Valider mon panier
+      </button>
       {cartList.length > 0 ? (
         <div>
-          <button>Validate</button>
           <CarItems
             cartList={cartList}
             sousTotal={sousTotal}
@@ -24,7 +27,7 @@ const Cart = ({
           />
         </div>
       ) : (
-        <p>The cart list is empty</p>
+        <p>Votre panier est vide</p>
       )}
     </div>
   );

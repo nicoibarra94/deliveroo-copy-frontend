@@ -1,7 +1,7 @@
 import "./App.css";
 import axios from "axios";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 
 import { useState, useEffect } from "react";
 import Logo from "./images/Deliveroo-Logo.png";
@@ -9,7 +9,7 @@ import RestaurantTittle from "./components/RestaurantTittle";
 import Categories from "./components/Categories";
 import Cart from "./components/Cart";
 
-library.add(faStar);
+library.add(faStar, faPlus, faMinus);
 
 function App() {
   const [data, setData] = useState({});
