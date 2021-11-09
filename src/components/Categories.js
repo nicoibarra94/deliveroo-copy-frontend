@@ -1,37 +1,29 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Category from "./Category";
 
-const Categories = ({ data }) => {
+const Categories = ({
+  data,
+  cartList,
+  setCartList,
+  sousTotal,
+  setsousTotal,
+  total,
+  setTotal,
+}) => {
   return (
     <div className="container">
       {data.categories.map((elem, index) => {
         return (
-          <div className="container-categories">
+          <div key={index} className="container-categories">
             <h2>{elem.name}</h2>
-            <div className="container-meals">
-              {elem.meals.map((meal, index) => {
-                return (
-                  <div className="container-meal">
-                    <div className="container-meal-text">
-                      <h3>{meal.title}</h3>
-                      <p>{meal.description}</p>
-                      <div className="price-popular">
-                        <p id="price">{meal.price} €</p>
-                        {meal.popular === true && (
-                          <div className="star">
-                            <FontAwesomeIcon icon="star" />
-                            <p>Populaire</p>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-
-                    {meal.picture && (
-                      <img className="image-meal" src={meal.picture} alt="" />
-                    )}
-                  </div>
-                );
-              })}
-            </div>
+            <Category
+              elem={elem}
+              cartList={cartList}
+              setCartList={setCartList}
+              sousTotal={sousTotal}
+              setsousTotal={setsousTotal}
+              total={total}
+              setTotal={setTotal}
+            />
           </div>
         );
       })}
