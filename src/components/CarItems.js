@@ -43,7 +43,7 @@ const CarItems = ({
       newSousTotal =
         newSousTotal + Number(newList[i].quantity) * Number(newList[i].price);
     }
-    setsousTotal(newSousTotal);
+    setsousTotal(newSousTotal.toFixed(2));
     setTotal((newSousTotal + 2.5).toFixed(2));
   };
 

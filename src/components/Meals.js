@@ -12,6 +12,16 @@ const Meal = ({
   const handleAddtoCart = (elemmeals, meal) => {
     const updateList = [...cartList];
 
+    // for (let i = 0; i < updateList.length; i++) {
+    //   if (updateList[i].id === meal) {
+    // console.log(updateList[i]);
+    // console.log(meal);
+    //     updateList[i].quantity = updateList[i].quantity + 1;
+    // console.log(updateList[i].quantity);
+    //     setCartList(updateList);
+    //   }
+    // }
+
     for (let i = 0; i < elemmeals.length; i++) {
       if (elemmeals[i].id === meal) {
         elemmeals[i].quantity = 1;
